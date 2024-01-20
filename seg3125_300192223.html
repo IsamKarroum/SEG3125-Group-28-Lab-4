@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<link href="styles/style.css" rel="stylesheet" type="text/css">
+    <title>SEG3125 Questionaire</title>
+  </head>
+  
+  <body>
+	<h1>Survey</h1>
+	<form id="myform" action="index.php" >
+	<br>
+	<br>
+	<h2 class="intro">What do you think of the UI in this <a href="https://www.youtube.com/">YouTube</a> site?</h2>	
+	<br>
+	<br>
+	<a href="https://www.youtube.com/">
+	<img src="images/YouTube-FrontPage.png" alt="https://www.youtube.com/" width="450" height="300">
+	</a>
+	<br>
+	<br>
+	<div class="question">
+	<h2> Personal Information </h2>
+	<p>What is your full name?: <input type="text" name="name"></p>
+	<br>
+	<br>
+		
+	</div>	
+		
+	<div class="question">
+		<h2> Site Usage </h2>
+		How often do you visit YouTube in a week?<br>
+		<input type="radio" name="frequency" value="less5">Less than 5 times<br>
+		<input type="radio" name="frequency" value="5to5">5 to 10 times<br>
+		<input type="radio" name="frequency" value="10to15">10 to 15 times<br>
+		<input type="radio" name="frequency" value="over15">More than 15 times<br>
+		<br>
+		<br>
+	</div>
+
+	<div class="question">
+		What do you use YouTube for?<br>
+		<input type="checkbox" name="use" value="Entertainment">Entertainment<br>
+		<input type="checkbox" name="use" value="Music">Music<br>
+		<input type="checkbox" name="use" value="News">News<br>
+		<input type="checkbox" name="use" value="Sports">Sports<br>
+		<input type="checkbox" name="use" value="Education">Education<br>
+		<input type="checkbox" name="use" value="Other">Other<br>
+		<br>
+	</div>
+
+	<div class="question">	
+		Do you post content on YouTube?<br>
+		<select id="favorite">
+			<option value="No" selected="selected">No</option>
+			<option value="Rarely">Rarely</option>
+			<option value="Occasionally">Occasionally</option>
+			<option value="Often">Often</option>
+			<option value="Regularly">Regularly</option>
+		</select>
+	</div>
+
+	<div class="question">	
+		<p>Briefly describe your biggest issue with the site: <input type="text" name="issue"></p>
+	</div>
+
+	<div class="question">	
+		Which of the following YouTube alternatives have you used before?<br>
+		<input type="checkbox" name="alternative" value="Vimeo">Vimeo<br>
+		<input type="checkbox" name="alternative" value="DailyMotion">DailyMotion<br>
+		<input type="checkbox" name="alternative" value="Twitch">Twitch<br>
+		<input type="checkbox" name="alternative" value="Vevo">Vevo<br>
+		<br>
+	</div>
+	
+	<br>
+	<br>
+		
+	Additional Comments:<br>
+	<textarea rows="5" cols="30"></textarea>
+			
+	<br>
+	<br>
+			
+	<button id="submitButton" type="button" class="block">
+		SUBMIT your questionnaire
+	</button>
+		
+	<p id="signature">Site created by Theeravich (Arthur) Trakulkajornsak for SEG3125[A] Lab 1</p>	
+	
+	</form>
+  </body>
+</html> 
