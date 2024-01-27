@@ -4,22 +4,74 @@
 
 var products = [
 	{
-		name: "brocoli",
+		name: "lettuce",
 		vegetarian: true,
 		glutenFree: true,
+		organic: false,
 		price: 1.99
 	},
 	{
 		name: "bread",
 		vegetarian: true,
 		glutenFree: false,
+		organic: true,
 		price: 2.35
 	},
 	{
 		name: "salmon",
 		vegetarian: false,
 		glutenFree: true,
+		organic: false,
 		price: 10.00
+	},
+	{
+		name: "tomato",
+		vegetarian: true,
+		glutenFree: false,
+		organic: true,
+		price: 1.00
+	},
+	{
+		name: "onion",
+		vegetarian: true,
+		glutenFree: false,
+		organic: true,
+		price: 1.10
+	},
+	{
+		name: "pickle",
+		vegetarian: true,
+		glutenFree: false,
+		organic: true,
+		price: 2.20
+	},
+	{
+		name: "beef",
+		vegetarian: false,
+		glutenFree: true,
+		organic: false,
+		price: 11.00
+	},
+	{
+		name: "chicken",
+		vegetarian: false,
+		glutenFree: true,
+		organic: true,
+		price: 10.00
+	},
+	{
+		name: "pork",
+		vegetarian: false,
+		glutenFree: true,
+		organic: true,
+		price: 9.00
+	},
+	{
+		name: "tuna",
+		vegetarian: false,
+		glutenFree: true,
+		organic: true,
+		price: 15.00
 	}
 ];
 	
@@ -29,19 +81,28 @@ var products = [
 // prices should be included in this list, as well as a sort based on price
 
 function restrictListProducts(prods, restriction) {
-	let product_names = [];
+	let product = [];
 	for (let i=0; i<prods.length; i+=1) {
 		if ((restriction == "Vegetarian") && (prods[i].vegetarian == true)){
-			product_names.push(prods[i].name);
+			product.push(prods[i]);
 		}
 		else if ((restriction == "GlutenFree") && (prods[i].glutenFree == true)){
-			product_names.push(prods[i].name);
+			product.push(prods[i]);
+		}
+		else if ((restriction == "Organic") && (prods[i].organic == true)){
+			product.push(prods[i]);
+		}
+		else if ((restriction == "NonOrganic") && (prods[i].organic == false)){
+			product.push(prods[i]);
 		}
 		else if (restriction == "None"){
-			product_names.push(prods[i].name);
+			product.push(prods[i]);
 		}
 	}
-	return product_names;
+
+	product.sort(function(a,b){ return a.price - b.price});
+
+	return product;
 }
 
 // Calculate the total price of items, with received parameter being a list of products
