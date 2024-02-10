@@ -1,35 +1,23 @@
-.brand {
-  width: auto;
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: #a8a8a8;
+}
+
+.bg-cover {
+    background-size: cover !important;
+}
+
+.navbar-custom {
+    background-color: black;
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .navbar-nav .nav-link {
+    color: white;
+}
+
+.title {
   text-align: center;
-}
-
-.tab {
-  overflow: hidden;
-  border: 1px solid #e4a4a4;
-  background-color: #967777;
-}
-
-.tab button {
-  background-color: inherit;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  transition: 0.3s;
-}
-
-.tab button:hover {
-  background-color: #ddd;
-}
-
-.tab button.active {
-  background-color: #ccc;
-}
-
-.tabcontent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+  padding-bottom: 10px;
 }
